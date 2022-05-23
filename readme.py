@@ -1,3 +1,5 @@
+ITS ALL THE COMMANDS REQUIRE FOR NVIM-TREE AND ITS REALLY HELP FULL
+
 |Mappings|                                       *nvim-tree-mappings*
 
 - type `g?` to see the help UI with keybindings
