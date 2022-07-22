@@ -77,7 +77,7 @@ def main():
     if args.outFile:
         outFile = args.outFile
 
-    scale = 0.43
+    scale = 1
     if args.scale:
         scale = float(args.scale)
 
