@@ -1,7 +1,7 @@
 import copy, random, sys, time 
 WIDTH = 50
 HEIGHT = 50
-ALIVE = '0'
+ALIVE='0'
 DEAD = ' '
 
 idk = 0
