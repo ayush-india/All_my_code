@@ -1,4 +1,7 @@
 import time
+from pygame import mixer
+
+mixer.init()
 
 def alarm(k):
     global n
@@ -6,6 +9,8 @@ def alarm(k):
     while k != 0:
         k -= 1
         print(f"Drink water FAST !!!!!! \n Timer will reset in {k} sec ")
+        mixer.music.load('alarm.mp3')
+        mixer.music.play()
         time.sleep(1)
     timer(n)
     
