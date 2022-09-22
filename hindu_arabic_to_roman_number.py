@@ -1,7 +1,7 @@
 i = int(input("Enter and no and i will convert it to roman nos"))
 
 list = []
-while i >=1:
+while i >= 1:
     if i >= 1000:
         list.append("M")
         i -= 1000

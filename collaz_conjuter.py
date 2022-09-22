@@ -3,17 +3,18 @@ import numpy as np
 import numba as nb
 
 # Get Range to Check
-top_range = int(input('Top Range: '))
+top_range = int(input("Top Range: "))
 
-@nb.njit('int64[:](int_)')
+
+@nb.njit("int64[:](int_)")
 def collatz(top_range):
     # Initialize mem
-    mem = np.zeros(top_range + 1, dtype = np.int64)
+    mem = np.zeros(top_range + 1, dtype=np.int64)
     for start in range(2, top_range + 1):
         # If mod4 == 1: (3x + 1)/4
         if start % 4 == 1:
             mem[start] = mem[(start + (start >> 1) + 1) // 2] + 3
-        
+
         # If 4mod == 3: 3(3x + 1) + 1 and continue
         elif start % 4 == 3:
             num = start + (start >> 1) + 1
@@ -34,6 +35,7 @@ def collatz(top_range):
             mem[start] = mem[(start // 2)] + 1
 
     print(mem)
+
 
 mem = collatz(top_range)
 # # Plot each starting number with the length of it's sequence
