@@ -6,7 +6,7 @@ uppper_alphabets = list(string.ascii_uppercase)
 
 numbers = []
 
-for k in range(1, 10):
+for k in range(0, 10):
     numbers.append(k)
 
 password = []
