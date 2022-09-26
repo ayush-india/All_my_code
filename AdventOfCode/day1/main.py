@@ -43,24 +43,21 @@ How many measurements are larger than the previous measurement?
 
 SOLUTION ::
 """
-previous = "0"  
+previous = "0"
 current = "0"
 increase = 0
 i = 0
-with open("input.txt", 'r') as reader:
+with open("input.txt", "r") as reader:
     for line in reader:
         current = line
-        
+
         # print(int(line), end='')
-        if float(int(current)) > float(int(previous)):
+        if int(current) > int(previous):
             increase += 1
             previous = current
         else:
             previous = current
-            
 
         i += 1
 
 print(increase - 1)
-
-
